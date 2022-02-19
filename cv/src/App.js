@@ -30,32 +30,13 @@ const analytics = firebase.analytics();
 
 
 
-/*
-function App() {
 
+function App() {
   const [user] = useAuthState(auth);
-
-  return (
-    <div className="App">
-      <header>
-        <h1>⚛️🔥💬</h1>
-        <SignOut />
-      </header>
-
-      <section>
-        {user ? <ChatRoom /> : <SignIn />}
-      </section>
-
-    </div>
-  );
-}
-*/
-
-
-
-function App() {
   const [pageNumber, setPageNumber] = useState(0);
   console.log(pageNumber)
+
+
   if (pageNumber === 0) {
     return (
       <div>
@@ -87,6 +68,13 @@ function App() {
           </li>
         </Navbar>
         <Promo/>
+        <div className='welcomeText'>
+          <b className='firstLine'>Hi I am Software Developer</b>
+          <br></br>
+          <b className='secondLine'>Tampere University Student</b>
+          <br></br>
+          <b className='thirdLine'>and This is my resume</b>
+        </div>
       </div>
     );
   } else if (pageNumber === 1) {
@@ -219,6 +207,17 @@ function App() {
           </li>
         </Navbar>
         <Promo/>
+        <div className="App">
+          <header>
+            <h1>⚛️🔥💬</h1>
+            <SignOut />
+          </header>
+
+          <section>
+            {user ? <ChatRoom /> : <SignIn />}
+          </section>
+
+        </div>
       </div>
     );
   }

@@ -100,6 +100,41 @@ body {
     width: 100%;
 }
 
+.welcomeText {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+
+.firstLine {
+  font-size: 3em;
+  margin: 0;
+  line-height: 1;
+  color: #9b59b6;
+  display: flex;
+  justify-content: center;
+}
+.secondLine {
+  font-size: 2.5em;
+  margin: 0;
+  line-height: 1;
+  color:#9b59b6;
+  display: flex;
+  justify-content: center;
+}
+.thirdLine {
+  font-size: 2em;
+  margin: 0;
+  line-height: 1;
+  color:#9b59b6;
+  display: flex;
+  justify-content: center;
+}
+
+
 .promo h1{
     margin: 0;
     line-height: 1;
