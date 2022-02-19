@@ -242,68 +242,6 @@ function Navbar(props) {
   );
 }
 
-function Button (props) {
-  return (
-    <li className="nav-item">
-      <button className="icon-button">
-        {props.icon}
-      </button>
-    </li>
-  );
-}
-
-function NavItem1(props) {
-
-  return (
-    <li className="nav-item">
-      <a href="#" className="icon-button">
-        {props.icon}
-      </a>
-    </li>
-  );
-}
-
-
-function NavItem2(props) {
-
-  return (
-    <li className="nav-item">
-      <a href="#" className="icon-button">
-        {props.icon}
-      </a>
-    </li>
-  );
-}
-function NavItem3(props) {
-
-  return (
-    <li className="nav-item">
-      <a href="#" className="icon-button">
-        {props.icon}
-      </a>
-    </li>
-  );
-}
-function NavItem4(props) {
-
-  return (
-    <li className="nav-item">
-      <a href="#" className="icon-button">
-        {props.icon}
-      </a>
-    </li>
-  );
-}
-function NavItem5(props) {
-
-  return (
-    <li className="nav-item">
-      <a href="#" className="icon-button">
-        {props.icon}
-      </a>
-    </li>
-  );
-}
 
 
 
