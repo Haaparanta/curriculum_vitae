@@ -108,6 +108,31 @@ body {
   width: 100%;
 }
 
+.experience {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  background: rgba(0, 191, 255, 0.7);
+  flex-flow: column wrap;
+}
+.experience a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.experience a:hover {
+  background: rgba(255, 20, 147, 0.7);
+}
+.experience li:last-of-type a {
+  border-bottom: none;
+}
+
+
+
 
 .firstLine {
   font-size: 3em;

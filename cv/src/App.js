@@ -22,7 +22,7 @@ firebase.initializeApp({
 })
 
 const auth = firebase.auth();
-const db = firebase.firestore();
+const firestore = firebase.firestore();
 const analytics = firebase.analytics();
 
 
@@ -108,7 +108,6 @@ function App() {
             </button>
           </li>
         </Navbar>
-        <Promo/>
       </div>
     );
   } else if (pageNumber === 2) {
@@ -141,7 +140,6 @@ function App() {
             </button>
           </li>
         </Navbar>
-        <Promo/>
         <Projects/>
       </div>
     );
@@ -175,7 +173,6 @@ function App() {
             </button>
           </li>
         </Navbar>
-        <Promo/>
         <Experience/>
       </div>
     );
@@ -209,7 +206,6 @@ function App() {
             </button>
           </li>
         </Navbar>
-        <Promo/>
         <div className="App">
           <header>
             <h1>⚛️🔥💬</h1>
@@ -245,71 +241,52 @@ function Navbar(props) {
 }
 
 function Projects() {
-  const [info, setInfo] = useState([])
-
-  const fetchInfo=async()=>{
-    const response = db.collection('projects').orderBy('createdAt');
-    const data = await response.get();
-    data.docs.forEach(item => {
-      setInfo([...info, item.data()])
-    })
-  }
-
-  useEffect(() => {
-    fetchInfo();
-  }, [])
-
   return (
-    <div className='projects'>
-      {
-        info && info.map(part => {
-          return (
-            <div className='project'>
-              <h3>{part.name}</h3>
-              <p>{part.text}</p>
-              <p>{part.link}</p>
-            </div>
-          )
-        })
-      }
+    <div>
+      <section>
+        <h4>Name: </h4>
+        <h5>Text: </h5>
+        <a href="" target="_blank">Link</a>
+      </section>
+      <section>
+        <h4>Name: </h4>
+        <h5>Text: </h5>
+        <a href="" target="_blank">Link</a>
+      </section>
     </div>
   );
 }
 
+
 function Experience() {
-  const [info, setInfo] = useState([])
-
-  const fetchInfo=async()=>{
-    const response = db.collection('work');
-    const data = await response.get();
-    data.docs.forEach(item => {
-      setInfo([...info, item.data()])
-    })
-  }
-
-  useEffect(() => {
-    fetchInfo();
-  }, [])
-
   return (
-    <div className='experiences'>
-      {
-        info && info.map(part => {
-          return (
-            <div className='experience'>
-              <h1>Company: {part.company}</h1>
-              <p>Title: {part.title}</p>
-              <p>Start date: {part.start}</p>
-              <p>End date: {part.end}</p>
-              <p>Job information: {part.information}</p>
-              <p>Skills: {part.skills}</p>
-              <p>Behavior: {part.behavior}</p>
-              <p>Link: {part.link}</p>
-            </div>
-          )
-        })
-      }
-    </div>
+    <ul className='experience'>
+      <li>
+        <a href="https://intti.fi/palvelustehtavat-ja-paikat/-/services/3103?_fi_yja_pvservices_web_portlet_list_MilitaryServicesListPortlet_redirectUrl=https%3A%2F%2Fintti.fi%3A8443%2Fpalvelustehtavat-ja-paikat%3Fp_p_id%3Dfi_yja_pvservices_web_portlet_list_MilitaryServicesListPortlet%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26_fi_yja_pvservices_web_portlet_list_MilitaryServicesListPortlet_mvcRenderCommandName%3D%252Fpvservices%252Fview" target="_blank">
+        Company: Finnish Defence Forces <br></br> Job title: Virtual instructor support (programmer) <br></br> Start date: 5.7.2021 <br></br> End date: 16.3.2022</a>
+      </li>
+      <li>
+        <a href="https://apetit.fi/" target="_blank">Company: Apetit Ruoka Oy <br></br> Job title: food industry worker <br></br> Start date: 3.5.2021<br></br>End date: 2.7.2021</a>
+      </li>
+      <li>
+        <a href="https://apetit.fi/" target="_blank">Company: Apetit Ruoka Oy <br></br> Job title: food industry worker <br></br> Start date: 18.5.2020<br></br>End date: 7.8.2020</a>
+      </li>
+      <li>
+        <a href="https://apetit.fi/" target="_blank">Company: Apetit Ruoka Oy <br></br> Job title: maintenance mechanic <br></br> Start date: 3.6.2019<br></br>End date: 31.7.2019</a>
+      </li>
+      <li>
+        <a href="https://apetit.fi/" target="_blank">Company: Apetit Ruoka Oy <br></br> Job title: maintenance mechanic <br></br> Start date: 4.6.2018<br></br>End date: 27.7.2018</a>
+      </li>
+      <li>
+        <a href="https://apetit.fi/" target="_blank">Company: Apetit Ruoka Oy <br></br> Job title: maintenance mechanic <br></br> Start date: 5.6.2017<br></br>End date: 21.7.2017</a>
+      </li>
+      <li>
+        <a href="https://apetit.fi/" target="_blank">Company: Apetit Ruoka Oy <br></br> Job title: maintenance mechanic <br></br> Start date: 4.7.2016<br></br>End date: 29.7.2016</a>
+      </li>
+      <li>
+        <a href="https://apetit.fi/" target="_blank">Company: Apetit Ruoka Oy <br></br> Job title: maintenance mechanic <br></br> Start date: 22.6.2015<br></br>End date: 5.7.2015</a>
+      </li>
+    </ul>
   );
 }
 
@@ -343,7 +320,7 @@ function SignOut() {
 
 function ChatRoom() {
   const dummy = useRef();
-  const messagesRef = db.collection('messages');
+  const messagesRef = firestore.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(25);
 
   const [messages] = useCollectionData(query, { idField: 'id' });
