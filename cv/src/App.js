@@ -9,6 +9,7 @@ import 'firebase/compat/analytics';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { QuerySnapshot } from 'firebase/firestore';
 
 firebase.initializeApp({
   apiKey: "AIzaSyBjzW-mlbaOFv1l4W0nks1QmlJmQDU8ajo",
@@ -21,7 +22,7 @@ firebase.initializeApp({
 })
 
 const auth = firebase.auth();
-const firestore = firebase.firestore();
+const db = firebase.firestore();
 const analytics = firebase.analytics();
 
 
@@ -141,6 +142,7 @@ function App() {
           </li>
         </Navbar>
         <Promo/>
+        <Projects/>
       </div>
     );
   } else if (pageNumber === 3) {
@@ -174,6 +176,7 @@ function App() {
           </li>
         </Navbar>
         <Promo/>
+        <Experience/>
       </div>
     );
   } else if (pageNumber === 4) {
@@ -241,11 +244,74 @@ function Navbar(props) {
   );
 }
 
+function Projects() {
+  const [info, setInfo] = useState([])
 
+  const fetchInfo=async()=>{
+    const response = db.collection('projects').orderBy('createdAt');
+    const data = await response.get();
+    data.docs.forEach(item => {
+      setInfo([...info, item.data()])
+    })
+  }
 
+  useEffect(() => {
+    fetchInfo();
+  }, [])
 
+  return (
+    <div className='projects'>
+      {
+        info && info.map(part => {
+          return (
+            <div className='project'>
+              <h3>{part.name}</h3>
+              <p>{part.text}</p>
+              <p>{part.link}</p>
+            </div>
+          )
+        })
+      }
+    </div>
+  );
+}
 
+function Experience() {
+  const [info, setInfo] = useState([])
 
+  const fetchInfo=async()=>{
+    const response = db.collection('work');
+    const data = await response.get();
+    data.docs.forEach(item => {
+      setInfo([...info, item.data()])
+    })
+  }
+
+  useEffect(() => {
+    fetchInfo();
+  }, [])
+
+  return (
+    <div className='experiences'>
+      {
+        info && info.map(part => {
+          return (
+            <div className='experience'>
+              <h1>Company: {part.company}</h1>
+              <p>Title: {part.title}</p>
+              <p>Start date: {part.start}</p>
+              <p>End date: {part.end}</p>
+              <p>Job information: {part.information}</p>
+              <p>Skills: {part.skills}</p>
+              <p>Behavior: {part.behavior}</p>
+              <p>Link: {part.link}</p>
+            </div>
+          )
+        })
+      }
+    </div>
+  );
+}
 
 
 
@@ -277,7 +343,7 @@ function SignOut() {
 
 function ChatRoom() {
   const dummy = useRef();
-  const messagesRef = firestore.collection('messages');
+  const messagesRef = db.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(25);
 
   const [messages] = useCollectionData(query, { idField: 'id' });
@@ -323,6 +389,8 @@ function ChatRoom() {
 
 function ChatMessage(props) {
   const { text, uid, photoURL } = props.message;
+  console.log(text, uid, photoURL);
+  console.log(Object.values(props.message));
 
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
 
