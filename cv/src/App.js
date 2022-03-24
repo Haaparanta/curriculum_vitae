@@ -68,14 +68,8 @@ function App() {
             </button>
           </li>
         </Navbar>
+        <FrontText/>
         <Promo/>
-        <div className='welcomeText'>
-          <b className='firstLine'>Hi I am Software Developer</b>
-          <br></br>
-          <b className='secondLine'>Tampere University Student</b>
-          <br></br>
-          <b className='thirdLine'>and This is my resume</b>
-        </div>
       </div>
     );
   } else if (pageNumber === 1) {
@@ -207,25 +201,29 @@ function App() {
           </li>
         </Navbar>
         <div className="App">
-          <header>
-            <h1>⚛️🔥💬</h1>
-            <SignOut />
-          </header>
-
           <section>
             {user ? <ChatRoom /> : <SignIn />}
           </section>
-
         </div>
       </div>
     );
   }
 }
 
+function FrontText() {
+  return (
+    <div className='welcomeText'>
+      <h1>Hi, I am Software Developer</h1>
+      <h1>Tampere University Student</h1>
+      <h1>and This is my resume</h1>
+    </div>
+  );
+}
+
 
 function Promo() {
   return (
-    <div className="promo">
+    <div className='promo'>
       <h1>#React #JavaScript #C++ #Python #React-native</h1>
       <h2>#HTML #CSS #SQL #NoSQL #REST #Qt #API #MongoDB #Node #Blender #SQF</h2>
     </div>
@@ -294,7 +292,7 @@ function Experience() {
 
 
 
-
+//from fireship.io
 function SignIn() {
 
   const signInWithGoogle = () => {
@@ -305,7 +303,6 @@ function SignIn() {
   return (
     <>
       <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p>Do not violate the community guidelines or you will be banned for life!</p>
     </>
   )
 
@@ -321,7 +318,7 @@ function SignOut() {
 function ChatRoom() {
   const dummy = useRef();
   const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt').limitToLast(10);
 
   const [messages] = useCollectionData(query, { idField: 'id' });
 
@@ -373,7 +370,7 @@ function ChatMessage(props) {
 
   return (<>
     <div className={`message ${messageClass}`}>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
+      <img src={photoURL} />
       <p>{text}</p>
     </div>
   </>)
