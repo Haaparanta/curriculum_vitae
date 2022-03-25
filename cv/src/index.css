@@ -11,13 +11,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-  
-  
 :root {
   --bg:  #242526;
   --bg-accent: #484a4d;
@@ -27,22 +24,18 @@ code {
   --border-radius: 8px;
   --speed: 500ms; 
 }
-
-
-  
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 a {
   color: var(--text-color);
   text-decoration: none;;
 }
   
-/* Top Navigation Bar */
 
+/* Top Navigation Bar */
 /* <nav> */
 .navbar {
   height: var(--nav-size);
@@ -50,7 +43,6 @@ a {
   padding: 0 1rem;
   border-bottom: var(--border);
 }
-  
 /* <ul> */
 .navbar-nav {
   max-width: 100%;
@@ -59,12 +51,10 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 /* <li> */
 .nav-item {
   width: calc(var(--nav-size) * 0.8);
 }
-  
 /* Icon Button */
 .icon-button {
   --button-size: calc(var(--nav-size) * 0.5);
@@ -79,23 +69,95 @@ a {
   justify-content: center;
   transition: filter 300ms;
 }
-
 .icon-button:hover {
   filter: brightness(1.5);
 }
-  
 .icon-button svg { 
   fill: var(--text-color);
   width: 20px;
   height: 20px;
 }
 
+/* Page 1 */
+.welcomeText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  color: #FDFEFF;
+}
+.welcomeText h1 {
+  text-align: center;
+  font-size: 5vw;
+}
+.welcomeText h3 {
+  text-align: center;
+  font-size: 2vw;
+}
 
+.promo {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+.promo h1{
+  margin: 0;
+  line-height: 1;
+  font-size: 2.5vw;
+  color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+  -webkit-background-clip: text;
+  animation: animate 5s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
+  text-align: center;
+}
+.promo h2{
+  margin: 0;
+  line-height: 1;
+  font-size: 2vw;
+  color: transparent;
+  text-transform: uppercase;
+  background-image: linear-gradient(to left, #cc2e2e, #392ecc, #2ecc71, #f39c12);
+  -webkit-background-clip: text;
+  animation: animate 5s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
+  text-align: center;
+}
 
+@keyframes animate{
+  0%{
+      background-position: 0 100%
+  }
+  50%{
+      background-position: 100% 0;
+  }
+  100% {
+      background-position: 0 100%;
+  }
+}
 
+@media only screen and (max-width: 1440px) {
+  .welcomeText h1 {
+    font-size: 5vh;
+  }
+  .welcomeText h3 {
+    font-size: 2vh;
+  }
+  .promo h1 {
+    font-size: 3vh;
+  }
+  .promo h2 {
+    font-size: 2vh;
+  }
+}
 
-
-
+/* Page 4*/
 .experience {
   display: flex;
   list-style: none;
@@ -119,95 +181,11 @@ a {
   border-bottom: none;
 }
 
-
-/* Text */
-.promo {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 100%;
-}
-
-.welcomeText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 100%;
-  color: #FDFEFF;
-}
-.welcomeText h1 {
-  text-align: center;
-  font-size: 5vw;
-}
-.welcomeText h3 {
-  text-align: center;
-  font-size: 2vw;
-}
-
-.promo h1{
-    margin: 0;
-    line-height: 1;
-    font-size: 2.5vw;
-    color: transparent;
-    text-transform: uppercase;
-    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
-    -webkit-background-clip: text;
-    animation: animate 5s linear infinite;
-    -webkit-background-size: 500%;
-    background-size: 500%;
-    text-align: center;
-}
-
-
-.promo h2{
-    margin: 0;
-    line-height: 1;
-    font-size: 2vw;
-    color: transparent;
-    text-transform: uppercase;
-    background-image: linear-gradient(to left, #cc2e2e, #392ecc, #2ecc71, #f39c12);
-    -webkit-background-clip: text;
-    animation: animate 5s linear infinite;
-    -webkit-background-size: 500%;
-    background-size: 500%;
-    text-align: center;
-}
-
- @keyframes animate{
-    0%{
-        background-position: 0 100%
-    }
-    50%{
-        background-position: 100% 0;
-    }
-    100% {
-        background-position: 0 100%;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-  .welcomeText h1 {
-    font-size: 5vh;
-  }
-  .welcomeText h3 {
-    font-size: 2vh;
-  }
-  .promo h1 {
-    font-size: 3vh;
-  }
-  .promo h2 {
-    font-size: 2vh;
-  }
-}
-
-
+/* Page 5*/
 .App {
   text-align: center;
   margin: 0 auto;
 }
-
 .App header {
   background-color: #181717;
   height: 10vh;
@@ -224,14 +202,12 @@ a {
   padding: 10px;
   box-sizing: border-box;
 }
-
 .App section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
 }
-
 main {
   padding: 10px;
   height: 80vh;
@@ -240,11 +216,9 @@ main {
   display: flex;
   flex-direction: column;
 }
-
 main::-webkit-scrollbar {
   width: 0.25rem;
 }
-
 form {
   height: 10vh;
   position: fixed;
@@ -254,13 +228,10 @@ form {
   display: flex;
   font-size: 1.5rem;
 }
-
 form button {
   width: 20%;
   background-color: rgb(56, 56, 143);
 }
-
-
 input {
   line-height: 1.5;
   width: 100%;
@@ -271,7 +242,6 @@ input {
   border: none;
   padding: 0 10px;
 }
-
 button {
   background-color: #282c34; /* Green */
   border: none;
@@ -283,28 +253,20 @@ button {
   cursor: pointer;
   font-size: 1.25rem;
 }
-
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-
 .sign-in {
   color: #282c34;
   background: white;
   max-width: 400px;
   margin: 0 auto;
 }
-
-
-
-
 ul, li {
   text-align: left;
   list-style: none;
 }
-
 p {
   max-width: 500px;
   margin-bottom: 12px;
@@ -315,17 +277,13 @@ p {
   color: white;
   text-align: center;
 }
-
 .message {
   display: flex;
   align-items: center;
 }
-
-
 .sent {
   flex-direction: row-reverse;
 }
-
 .sent p {
   color: white;
   background: #0b93f6;
@@ -335,122 +293,9 @@ p {
   background: #e5e5ea;
   color: black;
 }
-
 img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin: 2px 5px;
-}
-
-.projectGrid {
-  height: 85vh;
-  margin-bottom: 200px;
-
-  display: grid;
-  gap: 0.5rem;
-
-  grid-template-areas: 
-  'a b c d'
-  'e f g h'
-  'i j k l'
-  'm n o p';
-
-  grid-template-rows: repeat(4, 20%);
-  grid-template-columns: repeat(4, 20%);
-
-  --stagger-delay: 100ms;
-}
-
-@keyframes cardEntrance {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-    filter: hue-rotate(180deg);
-  } 
-  to {
-    opacity: 0.7;
-    transform: scale(1);
-    filter: hue-rotate(0deg);
-  }
-}
-
-.project {
-  background-color: #9b59b6;
-  animation: cardEntrance 1000ms ease-out;
-  animation-fill-mode: forwards;
-  border-radius: 50%;
-}
-
-.project a {
-  text-align: center;
-  padding: auto;
-  height: 100%;
-}
-
-.project:nth-child(1) {
-  grid-area: a;
-  animation-delay: calc(1 * var(--stagger-delay));
-}
-
-.project:nth-child(2) {
-  grid-area: b;
-  animation-delay: calc(2 * var(--stagger-delay));
-}
-
-.project:nth-child(3) {
-  grid-area: c;
-  animation-delay: calc(3 * var(--stagger-delay));
-}
-.project:nth-child(4) {
-  grid-area: d;
-  animation-delay: calc(4 * var(--stagger-delay));
-}
-.project:nth-child(5) {
-  grid-area: e;
-  animation-delay: calc(5 * var(--stagger-delay));
-}
-.project:nth-child(6) {
-  grid-area: f;
-  animation-delay: calc(6 * var(--stagger-delay));
-}
-.project:nth-child(7) {
-  grid-area: g;
-  animation-delay: calc(7 * var(--stagger-delay));
-}
-.project:nth-child(8) {
-  grid-area: h;
-  animation-delay: calc(8 * var(--stagger-delay));
-}
-.project:nth-child(9) {
-  grid-area: i;
-  animation-delay: calc(9 * var(--stagger-delay));
-}
-.project:nth-child(10) {
-  grid-area: j;
-  animation-delay: calc(10 * var(--stagger-delay));
-}
-.project:nth-child(11) {
-  grid-area: k;
-  animation-delay: calc(11 * var(--stagger-delay));
-}
-.project:nth-child(12) {
-  grid-area: l;
-  animation-delay: calc(12 * var(--stagger-delay));
-}
-.project:nth-child(13) {
-  grid-area: m;
-  animation-delay: calc(13 * var(--stagger-delay));
-}
-.project:nth-child(14) {
-  grid-area: n;
-  animation-delay: calc(14 * var(--stagger-delay));
-}
-.project:nth-child(15) {
-  grid-area: o;
-  animation-delay: calc(15 * var(--stagger-delay));
-}
-.project:nth-child(16) {
-  grid-area: p;
-  animation-delay: calc(16 * var(--stagger-delay));
 }
