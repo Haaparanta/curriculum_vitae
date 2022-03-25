@@ -239,7 +239,6 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(40, 37, 53);
 }
 
 main {
@@ -352,4 +351,115 @@ img {
   border-radius: 50%;
   margin: 2px 5px;
 }
-  
+
+.projectGrid {
+  height: 85vh;
+  margin-bottom: 200px;
+
+  display: grid;
+  gap: 0.5rem;
+
+  grid-template-areas: 
+  'a b c d'
+  'e f g h'
+  'i j k l'
+  'm n o p';
+
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 25% auto auto 25%;
+
+  --stagger-delay: 100ms;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  } 
+  to {
+    opacity: 0.7;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.project {
+  background-color: #9b59b6;
+  animation: cardEntrance 1000ms ease-out;
+  animation-fill-mode: forwards;
+  border-radius: 50%;
+}
+
+.project a {
+  text-align: center;
+  padding: auto;
+  height: 100%;
+}
+
+.project:nth-child(1) {
+  grid-area: a;
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+
+.project:nth-child(2) {
+  grid-area: b;
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+
+.project:nth-child(3) {
+  grid-area: c;
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+.project:nth-child(4) {
+  grid-area: d;
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+.project:nth-child(5) {
+  grid-area: e;
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+.project:nth-child(6) {
+  grid-area: f;
+  animation-delay: calc(6 * var(--stagger-delay));
+}
+.project:nth-child(7) {
+  grid-area: g;
+  animation-delay: calc(7 * var(--stagger-delay));
+}
+.project:nth-child(8) {
+  grid-area: h;
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+.project:nth-child(9) {
+  grid-area: i;
+  animation-delay: calc(9 * var(--stagger-delay));
+}
+.project:nth-child(10) {
+  grid-area: j;
+  animation-delay: calc(10 * var(--stagger-delay));
+}
+.project:nth-child(11) {
+  grid-area: k;
+  animation-delay: calc(11 * var(--stagger-delay));
+}
+.project:nth-child(12) {
+  grid-area: l;
+  animation-delay: calc(12 * var(--stagger-delay));
+}
+.project:nth-child(13) {
+  grid-area: m;
+  animation-delay: calc(13 * var(--stagger-delay));
+}
+.project:nth-child(14) {
+  grid-area: n;
+  animation-delay: calc(14 * var(--stagger-delay));
+}
+.project:nth-child(15) {
+  grid-area: o;
+  animation-delay: calc(15 * var(--stagger-delay));
+}
+.project:nth-child(16) {
+  grid-area: p;
+  animation-delay: calc(16 * var(--stagger-delay));
+}

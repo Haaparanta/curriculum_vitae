@@ -240,18 +240,104 @@ function Navbar(props) {
 
 function Projects() {
   return (
-    <div>
-      <section>
-        <h4>Name: </h4>
-        <h5>Text: </h5>
-        <a href="" target="_blank">Link</a>
-      </section>
-      <section>
-        <h4>Name: </h4>
-        <h5>Text: </h5>
-        <a href="" target="_blank">Link</a>
-      </section>
-    </div>
+    <ul className='projectGrid'>
+      <li className='project'>
+        <a href="https://github.com/Haaparanta/curriculum_vitae" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>CV</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="https://github.com/Haaparanta/fullStackOpen" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>Full Stack Open 2022</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="https://github.com/Haaparanta/FlutterCourse" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>Flutter Course</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="https://github.com/Haaparanta/leRacoon" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>LeRacoon</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="https://github.com/Haaparanta/SQL-course" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>SQL Course</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="https://github.com/Haaparanta/GIT" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>GIT</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>Nysse</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>Tirakka</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>Tetris</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>weather app</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>Concurrency</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>Sowtfare Design</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>XA-361 AMOS</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>SISU GTP</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>XA-360 AMV</h1>
+        </a>
+      </li>
+      <li className='project'>
+        <a href="https://github.com/Haaparanta/minuuttikalja" target="_blank">
+          <br></br><br></br><br></br><br></br><br></br>
+          <h1>Minuuttikalja</h1>
+        </a>
+      </li>
+    </ul>
   );
 }
 
