@@ -213,9 +213,9 @@ function App() {
 function FrontText() {
   return (
     <div className='welcomeText'>
-      <h1>Hi, I am Software Developer</h1>
-      <h1>Tampere University Student</h1>
-      <h1>and This is my resume</h1>
+      <h1>Hello World!</h1>
+      <h3>Hi, I am Software Developer, Tampere University Student</h3>
+      <h3>and This is my resume</h3>
     </div>
   );
 }

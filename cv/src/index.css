@@ -7,7 +7,7 @@ body {
     background-size: cover;
     background-position: center;
     font-family: roboto;
-    background-image: url('./low-poly-grid-haikei.svg');
+    background-image: url('./blurry-gradient-haikei.svg');
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -26,23 +26,6 @@ code {
   --border: 1px solid #474a4d;
   --border-radius: 8px;
   --speed: 500ms; 
-}
-
-.frontParent {
-  max-width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.frontChild2 {
-  align-self: center;
-  flex-basis: 50%;
-}
-
-.frontChild3 {
-  align-self: center;
-  flex-basis: 30%;
 }
 
 
@@ -147,21 +130,26 @@ a {
 }
 
 .welcomeText {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  color: #FDFEFF;
 }
 .welcomeText h1 {
   text-align: center;
   font-size: 5vw;
 }
+.welcomeText h3 {
+  text-align: center;
+  font-size: 2vw;
+}
 
 .promo h1{
     margin: 0;
     line-height: 1;
-    font-size: 3vw;
+    font-size: 2.5vw;
     color: transparent;
     text-transform: uppercase;
     background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
@@ -202,6 +190,9 @@ width: 100%;
 @media only screen and (max-width: 1440px) {
   .welcomeText h1 {
     font-size: 5vh;
+  }
+  .welcomeText h3 {
+    font-size: 2vh;
   }
   .promo h1 {
     font-size: 3vh;
@@ -365,8 +356,8 @@ img {
   'i j k l'
   'm n o p';
 
-  grid-template-rows: repeat(4, 25%);
-  grid-template-columns: 25% auto auto 25%;
+  grid-template-rows: repeat(4, 20%);
+  grid-template-columns: repeat(4, 20%);
 
   --stagger-delay: 100ms;
 }
