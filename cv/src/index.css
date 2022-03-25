@@ -10,7 +10,7 @@ body {
     background-image: url('./blurry-gradient-haikei.svg');
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -157,25 +157,58 @@ a {
   }
 }
 
+
+/* Page2*/
+.study {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  aspect-ratio: 900/600;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: roboto;
+  background-image: url('./low-poly-grid-haikei.svg');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Page3 */
+.project {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  aspect-ratio: 900/600;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: roboto;
+  background-image: url('./low-poly-grid-haikei.svg');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Page 4*/
 .experience {
   display: flex;
   list-style: none;
   margin: 0;
-  background: rgba(0, 191, 255, 0.7);
+  background: rgba(0, 191, 255, 0.3);
   flex-flow: column wrap;
 }
 .experience a {
   text-decoration: none;
   display: block;
-  padding: 1em;
+  padding: 1.5vh;
   color: rgba(255,255,255,1);
+  font-size: 1.5vh;
   text-align: center;
   border-top: 1px solid rgba(255,255,255,0.3);
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .experience a:hover {
-  background: rgba(255, 20, 147, 0.7);
+  background: rgba(113, 197, 98, 0.7);
 }
 .experience li:last-of-type a {
   border-bottom: none;
