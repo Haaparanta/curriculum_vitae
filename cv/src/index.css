@@ -141,7 +141,6 @@ a {
       background-position: 0 100%;
   }
 }
-
 @media only screen and (max-width: 1440px) {
   .welcomeText h1 {
     font-size: 5vh;
@@ -161,24 +160,136 @@ a {
 /*
   * Page 2
 */
-.study {
-  height: 90vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background: url('./study-page.svg');
+.study1 {
+  position: absolute;
+  display: inline;
+  top: 13%;
+  left: 15%;
+  font-size: 1vh;
+}
+.study2 {
+  position: absolute;
+  display: inline;
+  top: 27%;
+  left: 15%;
+  font-size: 1vh;
+}
+.study3 {
+  position: absolute;
+  display: inline;
+  top: 45%;
+  left: 15%;
+  font-size: 1vh;
+}
+.study4 {
+  position: absolute;
+  display: inline;
+  top: 60%;
+  left: 30%;
+  font-size: 1vh;
+}
+.study5 {
+  position: absolute;
+  display: inline;
+  top: 60%;
+  right: 30%;
+  font-size: 1vh;
+}
+
+
+@media only screen and (max-width: 1440px) {
+  .study1 {
+    font-size: 1vw;
+  }
+  .study2 {
+    font-size: 1vw;
+  }
+  .study3 {
+    font-size: 1vw;
+  }
+  .study4 {
+    font-size: 1vw;
+  }
+  .study5 {
+    font-size: 1vw;
+  }
 }
 
 
 /* Page3 */
-.project {
-  height: 90vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background: url('./study-page.svg');
+.cv {
+  position: absolute;
+  display: inline;
+  left: 15%;
+  top: 15%;
+  background: rgba(0, 191, 255, 0.05);
+}
+.cv h1 {
+  font-size: 2vw;
+  text-align: center;
+  margin: 0;
+}
+.cv h3 {
+  font-size: 1vw;
+  text-align: center;
+  margin: 0;
+}
+
+.fullstackopen {
+  position: absolute;
+  display: inline;
+  right: 20%;
+  top: 35%;
+  background: rgba(0, 191, 255, 0.05);
+}
+.fullstackopen h1 {
+  font-size: 2vw;
+  text-align: center;
+  margin: 0;
+}
+.fullstackopen h3 {
+  font-size: 1vw;
+  text-align: center;
+  margin: 0;
+}
+
+.fireship {
+  position: absolute;
+  display: inline;
+  left: 30%;
+  bottom: 10%;
+  background: rgba(0, 191, 255, 0.05);
+}
+.fireship h1 {
+  font-size: 2vw;
+  text-align: center;
+  margin: 0;
+}
+.fireship h3 {
+  font-size: 1vw;
+  text-align: center;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1440px) {
+  .cv h1{
+    font-size: 3vh;
+  }
+  .cv h3{
+    font-size: 2vh;
+  }
+  .fullstackopen h1{
+    font-size: 3vh;
+  }
+  .fullstackopen h3{
+    font-size: 2vh;
+  }
+  .fireship h1{
+    font-size: 3vh;
+  }
+  .fireship h3{
+    font-size: 2vh;
+  }
 }
 
 /* Page 4*/

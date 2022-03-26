@@ -239,17 +239,71 @@ function Navbar(props) {
 
 function Study() {
   return (
-    <div className='study'>
-
-    </div>
+    <>
+      <div className='study1'>
+        <h1>Hi, I am Vesa Haaparanta and I study third-year computer science</h1>
+        <h1>at the university of tampere on the Hervanta campus.</h1>
+        <h1>I am fluent in Finnish and English.</h1>
+      </div>
+      <div className='study2'>
+        <h1>I have a strong passion for web development</h1>
+        <h1>and I am looking forward to learning more about it.</h1>
+        <h1>More specifically I would like to be frontend,</h1>
+        <h1>mobile and full-stack developer.</h1>
+      </div>
+      <div className='study3'>
+        <h1>I am an open-minded person, who is always</h1>
+        <h1>willing to learn new things. I am also a team player,</h1>
+        <h1>who is always willing to help others.</h1>
+      </div>
+      <div className='study4'>
+        <h1>My main interests are:</h1>
+        <br></br>
+        <h1>Frontend development</h1>
+        <h1>Mobile development</h1>
+        <h1>Full-stack development</h1>
+        <h1>Game development</h1>
+        <h1>Artificial intelligence</h1>
+        <h1>Machine learning</h1>
+      </div>
+      <div className='study5'>
+        <h1>I have a strong background in software development</h1>
+        <h1>and I am familiar with the following technologies:</h1>
+        <br></br>
+        <h1>C++  Python  JavaScript</h1>
+        <h1>HTML  CSS  Node.js</h1>
+        <h1>React  React-Native</h1>
+        <h1>Flutter  Dart  Git</h1>
+        <h1>MySQL  NoSQL  REST </h1>
+        <h1>Blender  Figma  Illustrator </h1>
+        <h1>SQF</h1>
+      </div>
+    </>
   );
 }
 
 function Projects() {
   return (
-   <div className='project'>
-
-   </div>
+    <>
+      <a href="https://github.com/Haaparanta/curriculum_vitae" className="cv" target="_blank">
+        <h1>Curriculum Vitae</h1>
+        <h3>This is my Web Portfolio</h3>
+        <h3>This website made with React + JS + CSS + HTML</h3>
+        <h3>This project has teach me lot about CSS and HTML</h3>
+      </a>
+      <a href="https://fullstackopen.com/about" className="fullstackopen" target="_blank">
+        <h1>FullStackOpen 2022</h1>
+        <h3>I have done most of the frontend here</h3>
+        <h3>This course is so educational for Js + React Web Developer</h3>
+        <h3>I would suggest this course for everybody</h3>
+      </a>
+      <a href="https://fireship.io/lessons/" className="fireship" target="_blank">
+        <h1>Fireship.io</h1>
+        <h3>I have done lot of these and still doing more</h3>
+        <h3>One of the best youtubers and course makers</h3>
+        <h3>This course is pure 🔥🔥🔥</h3>
+      </a>
+    </>
   );
 }
 

@@ -18,12 +18,12 @@ C++
 Python  
 JavaScript  
 HTML  
-CSS  
+CSS 
+Node.js  
 React  
 React-Native  
 Flutter  
-Dart  
-Node.js  
+Dart   
 MySQL  
 NoSQL  
 REST  
