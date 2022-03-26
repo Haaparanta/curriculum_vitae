@@ -231,11 +231,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 main {
   padding: 10px;
-  height: 80vh;
+  height: 70vh;
   margin: 10vh 0 10vh;
   overflow-y: scroll;
   display: flex;
