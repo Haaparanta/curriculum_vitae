@@ -19,8 +19,8 @@ code {
   --bg:  #242526;
   --bg-accent: #484a4d;
   --text-color: #dadce1;
-  --nav-size: 100px;
-  --border: 1px solid #474a4d;
+  --nav-size: 9.5vh;
+  --border: 0.5vh solid #474a4d;
   --border-radius: 8px;
   --speed: 500ms; 
 }
@@ -158,35 +158,27 @@ a {
 }
 
 
-/* Page2*/
+/*
+  * Page 2
+*/
 .study {
-  margin: 0;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
-  aspect-ratio: 900/600;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: roboto;
-  background-image: url('./low-poly-grid-haikei.svg');
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: url('./study-page.svg');
 }
 
 
 /* Page3 */
 .project {
-  margin: 0;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
-  aspect-ratio: 900/600;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: roboto;
-  background-image: url('./low-poly-grid-haikei.svg');
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: url('./study-page.svg');
 }
 
 /* Page 4*/
