@@ -208,11 +208,17 @@ function App() {
 
 function FrontText() {
   return (
-    <div className='welcomeText'>
-      <h1>Hello World!</h1>
-      <h3>Hi, I am Software Developer, Tampere University Student</h3>
-      <h3>and This is my resume</h3>
-    </div>
+    <>
+      <div className='welcomeText'>
+        <h1>Hello World!</h1>
+        <h3>Hi, I am Software Developer, Tampere University Student</h3>
+        <h3>and This is my resume</h3>
+      </div>
+      <a href='https://github.com/Haaparanta' className='github' target="_blank">
+      </a>
+      <a href='https://www.linkedin.com/in/vesahaaparanta/' className='linkedin' target="_blank">        
+      </a>
+    </>
   );
 }
 
@@ -258,7 +264,6 @@ function Study() {
       </div>
       <div className='study4'>
         <h1>My main interests are:</h1>
-        <br></br>
         <h1>Frontend development</h1>
         <h1>Mobile development</h1>
         <h1>Full-stack development</h1>
@@ -269,7 +274,6 @@ function Study() {
       <div className='study5'>
         <h1>I have a strong background in software development</h1>
         <h1>and I am familiar with the following technologies:</h1>
-        <br></br>
         <h1>C++  Python  JavaScript</h1>
         <h1>HTML  CSS  Node.js</h1>
         <h1>React  React-Native</h1>
@@ -312,7 +316,7 @@ function Experience() {
   return (
     <ul className='experience'>
       <li>
-        <a href="https://intti.fi/palvelustehtavat-ja-paikat/-/services/3103?_fi_yja_pvservices_web_portlet_list_MilitaryServicesListPortlet_redirectUrl=https%3A%2F%2Fintti.fi%3A8443%2Fpalvelustehtavat-ja-paikat%3Fp_p_id%3Dfi_yja_pvservices_web_portlet_list_MilitaryServicesListPortlet%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview%26_fi_yja_pvservices_web_portlet_list_MilitaryServicesListPortlet_mvcRenderCommandName%3D%252Fpvservices%252Fview" target="_blank">
+        <a href="./armeijaTyötodistus.pdf" target="_blank">
         Company: Finnish Defence Forces <br></br> Job title: Virtual instructor support (programmer) <br></br> Start date: 5.7.2021 <br></br> End date: 16.3.2022</a>
       </li>
       <li>

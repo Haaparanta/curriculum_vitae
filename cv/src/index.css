@@ -79,6 +79,22 @@ a {
 }
 
 /* Page 1 */
+.github {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-image: url('./github-icon.svg');
+  width: 10vh;
+  height: 10vh;
+}
+.linkedin {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  background-image: url('./linkedin-icon.svg');
+  width: 10vh;
+  height: 10vh;
+}
 .welcomeText {
   position: absolute;
   top: 50%;
@@ -141,7 +157,15 @@ a {
       background-position: 0 100%;
   }
 }
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1080px) {
+  .github {
+    left: 5%;
+    top: 20%;
+  }
+  .linkedin {
+    right: 5%;
+    top: 20%;
+  }
   .welcomeText h1 {
     font-size: 5vh;
   }
@@ -164,54 +188,64 @@ a {
   position: absolute;
   display: inline;
   top: 13%;
-  left: 15%;
+  left: 10%;
   font-size: 1vh;
 }
 .study2 {
   position: absolute;
   display: inline;
   top: 27%;
-  left: 15%;
+  left: 10%;
   font-size: 1vh;
 }
 .study3 {
   position: absolute;
   display: inline;
   top: 45%;
-  left: 15%;
+  left: 10%;
   font-size: 1vh;
 }
 .study4 {
   position: absolute;
   display: inline;
   top: 60%;
-  left: 30%;
+  left: 15%;
   font-size: 1vh;
 }
 .study5 {
   position: absolute;
   display: inline;
   top: 60%;
-  right: 30%;
+  right: 15%;
   font-size: 1vh;
 }
 
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1280px) {
   .study1 {
-    font-size: 1vw;
+    font-size: 0.8vw;
+    left: 20%;
+    top: 15%;
   }
   .study2 {
-    font-size: 1vw;
+    font-size: 0.8vw;
+    left: 20%;
+    top: 25%;
   }
   .study3 {
-    font-size: 1vw;
+    font-size: 0.8vw;
+    left: 20%;
+    top: 40%;
   }
   .study4 {
-    font-size: 1vw;
+    font-size: 0.8vw;
+    left: 20%;
+    top: 50%;
   }
   .study5 {
-    font-size: 1vw;
+    font-size: 0.8vw;
+    left: 20%;
+    top: 70%;
   }
 }
 
@@ -271,7 +305,7 @@ a {
   margin: 0;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1080px) {
   .cv h1{
     font-size: 3vh;
   }
