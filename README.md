@@ -18,7 +18,8 @@ I have a strong background in software development and I am familiar with the fo
 
 C++  
 Python  
-JavaScript  
+JavaScript
+Typescript  
 HTML  
 CSS 
 Node.js  
