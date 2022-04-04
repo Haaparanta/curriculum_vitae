@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+
+
 import FrontPage from './component/frontPage';
+import NavBar from './component/navBar';
+
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -24,14 +28,51 @@ const auth = firebase.auth();
 const firestore = firebase.firestore();
 const analytics = firebase.analytics();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+function App(): JSX.Element {
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const setPageNumberTo = (pageNumber: number) => {
+    setPageNumber(pageNumber);
+  };
+
+  if (pageNumber === 0) {
+    return (
+      <>
+        <NavBar setPageNumberTo={setPageNumberTo} />
         <FrontPage />
-      </header>
-    </div>
-  );
+      </>
+    );
+  } else if (pageNumber === 1) {
+    return (
+      <>
+        <NavBar setPageNumberTo={setPageNumberTo} />
+      </>
+    );
+  } else if (pageNumber === 2) {
+    return (
+      <>
+        <NavBar setPageNumberTo={setPageNumberTo} />
+      </>
+    );
+  } else if (pageNumber === 3) {
+    return (
+      <>
+        <NavBar setPageNumberTo={setPageNumberTo} />
+      </>
+    );
+  } else if (pageNumber === 4) {
+    return (
+      <>
+        <NavBar setPageNumberTo={setPageNumberTo} />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <h1>Error 404</h1>
+      </>
+    );
+  }
 }
 
 export default App;
