@@ -1,0 +1,33 @@
+
+.github {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    background-image: url('./github-icon.svg');
+    width: 10vh;
+    height: 10vh;
+  }
+  .linkedin {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    background-image: url('./linkedin-icon.svg');
+    width: 10vh;
+    height: 10vh;
+  }
+  .welcomeText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    color: #FDFEFF;
+  }
+  .welcomeText h1 {
+    text-align: center;
+    font-size: 5vw;
+  }
+  .welcomeText h3 {
+    text-align: center;
+    font-size: 2vw;
+  }
