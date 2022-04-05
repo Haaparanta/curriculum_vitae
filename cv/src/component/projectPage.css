@@ -1,0 +1,31 @@
+:root {
+  --text-color: #010203;
+  --title-font-size: 2rem;
+  --text-font-size: 1.5rem;
+  --margin: 1rem;
+  --padding: 1rem;
+  --line-height: 0.2rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 var(--margin);
+}
+
+.project-list-item h3 {
+  color: var(--text-color);
+  font-size: var(--title-font-size);
+  margin: var(--margin);
+  padding: var(--padding);
+  font-weight: bold;
+  line-height: var(--line-height);
+}
+
+.project-list-item p {
+  color: var(--text-color);
+  font-size: var(--text-font-size);
+  margin: var(--margin);
+  padding: var(--padding);
+}
