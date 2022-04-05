@@ -12,6 +12,13 @@ export interface Course {
   description: string;
 };
 
+export interface ProjectText {
+  id: number;
+  title: string;
+  text: string;
+  link: string;
+};
+
 export interface workExperience {
   id: number;
   company: string;
