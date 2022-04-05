@@ -9,9 +9,9 @@ const FrontPage = () => {
                 <h3>Hi, I am Software Developer, Tampere University Student</h3>
                 <h3>and This is my resume</h3>
             </div>
-            <a href='https://github.com/Haaparanta' className='github' target="_blank">
+            <a href='https://github.com/Haaparanta' className='github' target="_blank" rel="noreferrer">
             </a>
-            <a href='https://www.linkedin.com/in/vesahaaparanta/' className='linkedin' target="_blank">        
+            <a href='https://www.linkedin.com/in/vesahaaparanta/' className='linkedin' target="_blank" rel="noreferrer">        
             </a>
         </>
     );

@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import NavBar from './component/navBar';
 import FrontPage from './component/frontPage';
-
+import StudyPage from './component/studyPage';
+import ProjectPage from './component/projectPage';
+import WorkPage from './component/workPage';
 import ChatPage from './component/chatPage';
 
 
@@ -26,18 +28,21 @@ function App(): JSX.Element {
     return (
       <>
         <NavBar setPageNumberTo={setPageNumberTo} />
+        <StudyPage />
       </>
     );
   } else if (pageNumber === 2) {
     return (
       <>
         <NavBar setPageNumberTo={setPageNumberTo} />
+        <ProjectPage />
       </>
     );
   } else if (pageNumber === 3) {
     return (
       <>
         <NavBar setPageNumberTo={setPageNumberTo} />
+        <WorkPage />
       </>
     );
   } else if (pageNumber === 4) {
