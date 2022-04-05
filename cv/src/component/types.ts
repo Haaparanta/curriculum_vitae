@@ -9,7 +9,7 @@ export interface StudyText {
 export interface Course {
   id: number;
   title: string;
-  text: string;
+  description: string;
 };
 
 

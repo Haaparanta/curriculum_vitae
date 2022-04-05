@@ -18,6 +18,8 @@
   padding: var(--padding);
   margin: var(--margin);
   background-image: url('../images/image.svg');
+  flex-grow: 1;
+  align-self: center;
 }
 
 .list1 {
@@ -67,5 +69,18 @@
   color: var(--text-color);
   font-size: var(--text-font-size);
   margin: var(--margin);
+  padding: var(--padding);
+}
+
+.course h2 {
+  color: var(--text-color);
+  font-size: var(--title-font-size);
+  font-weight: bold;
+}
+
+.course p {
+  color: var(--text-color);
+  font-size: var(--text-font-size);
+  margin: calc(var(--margin) * 0.5);
   padding: var(--padding);
 }

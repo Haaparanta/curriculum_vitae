@@ -1,6 +1,8 @@
 import React from "react";
+import { StudyText, Course } from "./types";
 import studyText from "./data/studyText";
-import { StudyText } from "./types";
+import Courses from "./data/course"
+
 import './studyPage.css';
 
 const StudyPage = () => {
@@ -13,17 +15,12 @@ const StudyPage = () => {
 };
 
 const ImageAndText = () => {
+  const listItems = Courses.map((course) => <CourseItem key={course.id} text={course}/>);
   return (
     <ul className="list2">
       <Image />
+      {listItems}
     </ul>
-  );
-};
-
-const Image = () => {
-  return (
-    <li className="image">
-    </li>
   );
 };
 
@@ -37,7 +34,6 @@ const Text: React.FC<{texts: Array<StudyText>}> = ({texts}) => {
 };
 
 const Segment: React.FC<{text: StudyText}> = ({text}) => {
-  console.log(text.id);
   if (text.showTitle) {
     return (
       <li className="listItemWithTitle">
@@ -54,7 +50,21 @@ const Segment: React.FC<{text: StudyText}> = ({text}) => {
   };
 };
 
+const Image = () => {
+  return (
+    <li className="image">
+    </li>
+  );
+};
 
+const CourseItem: React.FC<{text: Course}> = ({ text }) => {
+  return (
+    <li className="course">
+      <h2>{text.title}</h2>
+      <p>{text.description}</p>
+    </li>
+  );
+};
 
 
 
