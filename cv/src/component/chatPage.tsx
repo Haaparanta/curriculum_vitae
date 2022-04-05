@@ -4,7 +4,10 @@ import './chatPage.css';
 import { googleSignIn } from "./auth";
 import { auth, firestore} from "./firebase";
 
-import { query, where, limit, getDocs, collection, doc, orderBy, onSnapshot} from "firebase/firestore";
+import { query, limit, collection, orderBy, onSnapshot} from "firebase/firestore";
+import { addDoc } from "firebase/firestore";
+import { serverTimestamp } from "firebase/firestore";
+
 
 const collectionRef = collection(firestore, "messages");
 
@@ -19,6 +22,35 @@ const ChatPage = () => {
   );
 };
 
+/*
+import { signOut } from "firebase/auth";
+const Room = () => {
+  return (
+    <>
+      <SignOut/>
+      <ChatRoom />
+    </>
+  );
+};
+
+const signOutUser = async () => {
+  console.log('signing out');
+  await signOut(auth)
+    .then(() => {
+      console.log("signed out");
+    })
+    .catch ((error) => {
+      console.log(error);
+    });
+};
+
+function SignOut() {
+  return auth.currentUser && (
+    <button className="signOut" onClick={() => signOutUser}>Sign Out</button>
+  )
+}
+*/
+
 function SignIn() {
 
   const signInWithGoogle = () => {
@@ -29,31 +61,26 @@ function SignIn() {
     <>
       <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
     </>
-  )
+  );
+}
 
-}
-/*
-function SignOut() {
-  return auth.currentUser && (
-    <button className="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
-  )
-}
-*/
+
 
 
 function ChatRoom() {
-
+  const [messages, setMessages]: any = useState([]);
   const collectionListener = (collection: any) => {
-    const collectionQuery = query(collectionRef, limit(20), orderBy("createdAt", "asc"));
+    const collectionQuery = query(collectionRef, limit(20), orderBy("createdAt", "desc"));
 
     onSnapshot(collectionQuery, (querySnapshot) => {
-      const messages = querySnapshot.docs.map(doc => doc.data());
-      console.log(messages);
+      const data = querySnapshot.docs.map(doc => doc.data());
+      setMessages(data.reverse());
     });
   }
+  if (messages.length === 0) {
+    collectionListener(collectionRef);
+  };
 
-  collectionListener(collectionRef);
-  /*
   const [formValue, setFormValue] = useState('');
 
 
@@ -61,22 +88,23 @@ function ChatRoom() {
     e.preventDefault();
     if (auth.currentUser) {
       const { uid, photoURL } = auth.currentUser;
-      await messagesRef.add({
+      await addDoc(collectionRef,{
         text: formValue,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        createdAt: serverTimestamp(),
         uid,
         photoURL
-      })
+      });
   
       setFormValue('');
     }
   }
 
-  return (<>
+  return (
+  <>
+
     <main>
 
-      {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
-
+      {messages && messages.map((msg: { id: React.Key | null | undefined; }) => <ChatMessage key={msg.id} message={msg} />)}
 
     </main>
 
@@ -87,15 +115,13 @@ function ChatRoom() {
       <button type="submit" disabled={!formValue}>🕊️</button>
 
     </form>
-  </>)
-  */
-  return (<></>);
+  </>
+  );
 }
 
 
 function ChatMessage({ message }: { message: any }): JSX.Element {
   const { text, uid, photoURL } = message;
-  console.log(text, uid, photoURL);
 
   if (auth.currentUser) {
     const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
@@ -110,9 +136,5 @@ function ChatMessage({ message }: { message: any }): JSX.Element {
     return (<></>)
   }
 }
-
-
-
-
 
 export default ChatPage;
