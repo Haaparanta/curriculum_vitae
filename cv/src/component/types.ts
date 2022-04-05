@@ -12,5 +12,12 @@ export interface Course {
   description: string;
 };
 
-
+export interface workExperience {
+  id: number;
+  company: string;
+  position: string;
+  startDate: string;
+  endDate: string;
+  link: string;
+};
 
