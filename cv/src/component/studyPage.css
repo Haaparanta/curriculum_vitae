@@ -12,14 +12,20 @@
 }
 
 .image {
-  width: 200px;
-  height: 200px;
+  width: 20vh;
+  height: 20vh;
   border-radius: 50%;
   padding: var(--padding);
   margin: var(--margin);
   background-image: url('../images/image.svg');
   flex-grow: 1;
   align-self: center;
+}
+@media screen and (max-width: 1080px) {
+  .image {
+    width: 20vw;
+    height: 20vw;
+  }
 }
 
 .list1 {
