@@ -10,9 +10,18 @@ import ChatPage from './component/chatPage';
 
 function App(): JSX.Element {
   const [pageNumber, setPageNumber] = useState(0);
+  const [language, setLanguage] = useState(true); // true = english, false = Finnish
 
   const setPageNumberTo = (pageNumber: number) => {
-    setPageNumber(pageNumber);
+    if (pageNumber >= 0 && pageNumber < 100) {
+      setPageNumber(pageNumber);
+    } else {
+      if (pageNumber === 100) {
+        setLanguage(true);
+      } else {
+        setLanguage(false);
+      }
+    }
   };
 
   console.log(pageNumber);
@@ -21,7 +30,7 @@ function App(): JSX.Element {
     return (
       <>
         <NavBar setPageNumberTo={setPageNumberTo} />
-        <FrontPage />
+        <FrontPage language={language}/>
       </>
     );
   } else if (pageNumber === 1) {

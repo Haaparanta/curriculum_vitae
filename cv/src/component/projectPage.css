@@ -12,6 +12,8 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 0 var(--margin);
+  justify-content: center;
+  align-items: center;
 }
 
 .project-list-item h3 {
@@ -21,6 +23,7 @@
   padding: var(--padding);
   font-weight: bold;
   line-height: var(--line-height);
+  text-align: center;
 }
 
 .project-list-item p {
@@ -28,4 +31,5 @@
   font-size: var(--text-font-size);
   margin: var(--margin);
   padding: var(--padding);
+  text-align: center;
 }
