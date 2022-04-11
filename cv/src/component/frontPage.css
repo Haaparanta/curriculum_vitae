@@ -15,6 +15,18 @@
   width: 10vh;
   height: 10vh;
 }
+.info {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  color: #010203;
+}
+.info h3 {
+  font-size: 2.5vh;
+  text-align: center;
+}
 .welcomeText {
   position: absolute;
   top: 50%;
@@ -45,6 +57,9 @@
     font-size: 5vh;
   }
   .welcomeText h3 {
+    font-size: 2vh;
+  }
+  .info h3 {
     font-size: 2vh;
   }
 }

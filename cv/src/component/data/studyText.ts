@@ -1,7 +1,7 @@
 import { StudyText } from "../types";
 
 
-const studyText: StudyText[] = [
+export const studyText: StudyText[] = [
 {
   id: 1,
   title: 'Intrests',
@@ -34,5 +34,35 @@ const studyText: StudyText[] = [
 }
 ];
 
-
-export default studyText;
+export const OpintoText: StudyText[] = [
+  {
+    id: 1,
+    title: 'Intrests',
+    text: 'Hei, olen Vesa Haaparanta ja opiskelen kolmatta vuotta tietotekniikka Tampereen Yliopistossa. Pystyn puhumaan Suomea sekä Englantia hyvin.',
+    showTitle: false
+  },
+  {
+    id: 2,
+    title: 'Passions',
+    text: 'Minulla on vahva intohimo verkkokehitykseen ja odotan innolla, että saan oppia siitä lisää. Tarkemmin sanottuna haluaisin olla frontend-, mobiili- ja full-stack-kehittäjä.',
+    showTitle: false
+  },
+  {
+    id: 3,
+    title: 'WillPower',
+    text: 'Olen ennakkoluuloton ihminen, joka on aina valmis oppimaan uutta. Olen myös joukkuepelaaja, joka on aina valmis auttamaan muita.',
+    showTitle: false
+  },
+  {
+    id: 4,
+    title: 'Tärkeimmät kiinnostuksen kohteet pääaineissa ovat:',
+    text: 'Käyttöliittymäkehitys, mobiilikehitys, full-stack kehitys, pelikehitys, tekoäly, koneoppiminen',
+    showTitle: true
+  },
+  {
+    id: 5,
+    title: 'Minulla on vahva tausta ohjelmistokehityksestä ja tunnen seuraavat tekniikat:',
+    text: 'JavaScript, TypeScript, React, Firebase, C++, Python, Flutter, Dart, Git, Node.js, HTML, CSS, MySQL, REST, Blender, Figma, Illustrator, SQF',
+    showTitle: true
+  }
+  ];

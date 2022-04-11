@@ -1,14 +1,15 @@
 import React from "react";
 import { ProjectText } from "./types";
-import Projects from "./data/projectText";
+import { Projects, projektit } from "./data/projectText";
 import "./projectPage.css";
 
 
-const ProjectPage = () => {
-  const listItem = Projects.map((project: ProjectText) => <ProjectItem key={project.id} text={project} />);
+const ProjectPage = ({language}: {language:boolean}) => {
+  const eng = Projects.map((project: ProjectText) => <ProjectItem key={project.id} text={project} />);
+  const fin = projektit.map((project: ProjectText) => <ProjectItem key={project.id} text={project} />);
   return (
     <ul className="project-list">
-      {listItem}
+      {language ? eng : fin}
     </ul>
   );
 };

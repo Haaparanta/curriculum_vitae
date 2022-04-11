@@ -1,7 +1,7 @@
 import { Course } from "../types";
 
 
-const Courses: Course[] = [
+export const Courses: Course[] = [
   {
     id: 1,
     title: 'Full Stack Open 2022',
@@ -24,4 +24,27 @@ const Courses: Course[] = [
   },
 ];
 
-export default Courses;
+export const Kurssit: Course[] = [
+  {
+    id: 1,
+    title: 'Full Stack Open 2022',
+    description: 'Opin hyvin paljon JavaScript TypeScript, CSS, HTML ja paljon lisää.'
+  },
+  {
+    id: 2,
+    title: 'Ohjelmointi 3: Tekniikat',
+    description: 'Opin luomaan graafisia käyttöliittymiä käyttäen C++ ja Qt. Opin miten tehdä isoja projekteja Nysse projektista.'
+  },
+  {
+    id: 3,
+    title: 'Johdatus Ohjelmistotuotantoon(Jotu)',
+    description: 'Opin ohjelmisto tuotanosta ja ohjelmiston kehitämisen workflowsta.'
+  },
+  {
+    id: 4,
+    title: 'Tietorakenteet ja algoritmit(Tirakka)',
+    description: 'Opin käyttämään oikeita tietorakenteita ja löytämään niiden heikkoudet.'
+  },
+];
+
+

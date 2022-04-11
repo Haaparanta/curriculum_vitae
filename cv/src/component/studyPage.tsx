@@ -1,25 +1,25 @@
 import React from "react";
 import { StudyText, Course } from "./types";
-import studyText from "./data/studyText";
-import Courses from "./data/course"
-
+import {studyText, OpintoText} from "./data/studyText";
+import {Courses, Kurssit} from "./data/course"
 import './studyPage.css';
 
-const StudyPage = () => {
+const StudyPage = ({language}: {language:boolean}) => {
   return (
     <div className="Parent">
-      <Text texts={studyText}/>
-      <ImageAndText/>
+      <Text texts={language ? studyText : OpintoText}/>
+      <ImageAndText language={language}/>
     </div>
   );
 };
 
-const ImageAndText = () => {
-  const listItems = Courses.map((course) => <CourseItem key={course.id} text={course}/>);
+const ImageAndText = ({language}: {language:boolean}) => {
+  const eng = Courses.map((course) => <CourseItem key={course.id} text={course}/>);
+  const fin = Kurssit.map((course) => <CourseItem key={course.id} text={course}/>);
   return (
     <ul className="list2">
       <Image />
-      {listItems}
+      {language ? eng : fin}
     </ul>
   );
 };

@@ -1,12 +1,13 @@
 import React from "react";
 import { workExperience } from "./types";
-import  workExperiences  from "./data/workExperience"
+import { workExperiences, tyokokemus } from "./data/workExperience"
 
-const WorkPage = () => {
-  const listItems = workExperiences.map((workExperience) => <WorkExperienceItem key={workExperience.id} text={workExperience}/>);
+const WorkPage = ({language}: {language:boolean}) => {
+  const eng = workExperiences.map((workExperience) => <WorkExperienceItem key={workExperience.id} text={workExperience}/>);
+  const fin = tyokokemus.map((workExperience) => <WorkExperienceItem key={workExperience.id} text={workExperience}/>);
   return (
     <ul className="list">
-      {listItems}
+      {language ? eng : fin}
     </ul>
   );
 }

@@ -37,21 +37,21 @@ function App(): JSX.Element {
     return (
       <>
         <NavBar setPageNumberTo={setPageNumberTo} />
-        <StudyPage />
+        <StudyPage language={language}/>
       </>
     );
   } else if (pageNumber === 2) {
     return (
       <>
         <NavBar setPageNumberTo={setPageNumberTo} />
-        <ProjectPage />
+        <ProjectPage language={language}/>
       </>
     );
   } else if (pageNumber === 3) {
     return (
       <>
         <NavBar setPageNumberTo={setPageNumberTo} />
-        <WorkPage />
+        <WorkPage language={language}/>
       </>
     );
   } else if (pageNumber === 4) {
